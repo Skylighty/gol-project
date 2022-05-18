@@ -1,4 +1,5 @@
 import pygame
+import sys
 from eventmanager import *
 
 # Draw the current state of model on the screen
@@ -28,7 +29,9 @@ class GraphicalView(object):
         elif isinstance(event, QuitEvent):
             # shut down the pygame graphics
             self.isinitialized = False
+            pygame.display.quit()
             pygame.quit()
+            sys.exit()
         elif isinstance(event, ArrayModified):
             self.model.grid_array = event.array
             self.draw(event.array)

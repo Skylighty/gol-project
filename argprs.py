@@ -24,7 +24,7 @@ def parsing():
                         help='Main window height, DEFAULT=1080')
     parser.add_argument('-f', '--fps',
                         type=float,
-                        default=30.0,
+                        default=20.0,
                         metavar="",
                         help="Sets the frames per second of programme running, DEFAULT=30.0")
     parser.add_argument('-s', '--scale',
