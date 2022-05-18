@@ -1,7 +1,6 @@
 from eventmanager import *
 from numpy import ndarray
 from random import randint
-import pygame
 
 
 # evManager (EventManager): Allows posting messages to the event queue.        

@@ -1,5 +1,4 @@
 import pygame
-import model
 from eventmanager import *
 
 # Draw the current state of model on the screen

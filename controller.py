@@ -1,5 +1,4 @@
 import pygame
-import model
 from eventmanager import *
 
 # Handling controls from keyboard
