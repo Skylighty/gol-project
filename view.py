@@ -22,6 +22,7 @@ class GraphicalView(object):
         self.COL_WHITE = (255,255,255)                  # White for help - controls text
         self.COL_BLACK = (0,0,0)                        # Black for text background
     
+    
     # Allows object to receive events posted to event queue
     def notify(self, event):
         if isinstance(event, InitializeEvent):
@@ -40,6 +41,7 @@ class GraphicalView(object):
         elif isinstance(event, ViewUpdated):
             pygame.display.update()
     
+
     # Draw current game state on screen
     # Does nothing if isinitialized == False (pygame.init failed)
     def draw(self, array):
@@ -55,6 +57,7 @@ class GraphicalView(object):
                     pygame.draw.rect(self.screen, self.COL_GREY, [x_pos, y_pos, self.model.scale-self.model.offset, self.model.scale-self.model.offset])
         self.screen.blit(self.helptext, self.text_rect)
         
+
     # Set up the pygame graphical display and load graphical resources
     def initialize(self, w, h):
         result = pygame.init()

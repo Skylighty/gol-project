@@ -52,6 +52,7 @@ class GameEngine(object):
             for y in range(self.columns):
                 self.grid_array[x][y] = randint(0,1)
 
+
     # Calculates a total number of neighbor cells for cell
     def get_neighbors(self, x, y):
         total = 0
@@ -62,6 +63,7 @@ class GameEngine(object):
                 total += self.grid_array[x_edge][y_edge]
         total -= self.grid_array[x][y]
         return total
+
 
     # Calculates new numpy array - next move of 'life'
     def update(self):
